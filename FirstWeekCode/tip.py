@@ -3,10 +3,7 @@
 # the program recommends the tip in dollars acording to a %
 # 18%, 20% and 25%
 # by Daniel Rosas
-# now in GitHub
-# testing from GitHub to Atom
-# testing from Atom to Github
-# para mostrarle a Federico
+
 bill_acount = float(input(" how much is the account? "))
 print (f"for USD {bill_acount} the tip you have to pay is")
 print (f"USD {bill_acount*.18:.2f}\tfor 18%")
