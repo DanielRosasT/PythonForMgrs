@@ -1,1 +1,3 @@
-# code
+# Primer semana
+# ejercicios
+#
