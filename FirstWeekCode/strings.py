@@ -5,6 +5,7 @@
 # \n produces a line break and return
 # \t peoduces a tabulation within the strings
 # .upper() following quotation marks ej. "stop yelling".upper()
+#
 
 kanye_quote = "My greatest pain in life is that I will \
 never be able to see myself perform Live"
