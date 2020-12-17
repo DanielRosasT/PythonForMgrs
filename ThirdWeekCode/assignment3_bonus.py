@@ -2,7 +2,10 @@
 # Completed by: Daniel Rosas
 
 # Be sure to read the instructions carefully!
-
+from grading_functions import average
+from grading_functions import get_weighted_average
+from grading_functions import get_letter_grade
+from grading_functions import get_class_average
 # 1. Create three dictionaries, each one will contain information about a particular student: Steve, Alice and Tyler
 #   a. Assign each dictionary to a variable – eg. steve, alice and tyler
 #   b. Create the following keys: name, homework, quizzes, and tests
@@ -89,9 +92,6 @@ for student in students:
 #   c. Return the result 
 #   d. Test it out to make sure it works
 
-def average(grade):
-    return sum(grade)/len(grade)
-
 print (average(tyler['homework']))
 print (average(tyler['quizzes']))
 print (average(tyler['tests']))
@@ -101,8 +101,6 @@ print (average(tyler['tests']))
 #   d. Return the weighted average score for each student (homework is 10%, quizzes are 30%, and tests are 60%  of the grade).
 #   e. Test out your get_weighted_average() function on each student
 
-def get_weighted_average(score):
-    return (average (score['homework'])*.1)+(average(score['quizzes'])*.3)+(average(score['tests'])*.6)
 for student in students:
     print (student['name'],"weighted grade is", round(get_weighted_average(student),2))
 
@@ -116,18 +114,7 @@ for student in students:
 #       - Below 60: “F"
 #   c. Test it out on a few different numbers to make sure it works properly
 #   d. Use a for loop to get each student's letter grade
-def get_letter_grade(score):
-    if score >= 90:
-        letter_grade = "A"
-    elif score >= 80:
-        letter_grade = "B"
-    elif score >= 70:
-        letter_grade = "C"
-    elif score >= 60:
-        letter_grade = "D"
-    else:
-        letter_grade = "F"
-    return letter_grade
+
 print(get_letter_grade(82))
 
 for student in students:
@@ -139,11 +126,6 @@ for student in students:
 #   d. Finally, return the average of the results
 #   e. Test out your function by printing out the class average
 
-def get_class_average(students):
-    temp_list =[]
-    for student in students:
-        temp_list.append(get_weighted_average(student))
-    return average(temp_list)
 print ("The class average is ",round(get_class_average(students),2))
 # 9. The class has now a new student, Thomas, with the following grades:
 #   Homework: 90, 85, 80, 0
